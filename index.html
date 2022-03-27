@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+  <script>
+
+    function hashChange(value) {
+      var ele = document.querySelector("[qdn-view]");
+      if (value == "users") {
+        ele.innerHTML = "<b>I am in Users</b>"
+      } else if (value == "students") {
+        ele.innerHTML = "<b>I am in students</b>"
+      } else if (value == "subjects") {
+        ele.innerHTML = "<b>I am in Sujects</b>"
+      } else {
+        ele.innerHTML = "<b>I am in Users</b>"
+        value="users"
+      }
+
+      history.pushState(null, "", value);
+    }
+
+    function Load() {
+      var eles = document.querySelectorAll("[qdnRouter]");
+      debugger;
+
+      for (var i = 0; i < eles.length; i++) {
+        eles[i].addEventListener('click', function () {
+          var value = this.getAttribute("qdnRouter")
+          hashChange(value);
+        })
+      }
+
+      hashChange('');
+
+    }
+
+    window.addEventListener('load', Load);
+    window.addEventListener('hashchange', hashChange);
+
+
+  </script>
+</head>
+<body>
+
+
+  <a qdnRouter="users">Users</a> | <a qdnRouter="students">Students</a> | <a qdnRouter="subjects">Sujects</a>
+
+
+  <div  qdn-view>
+
+  </div>
+</body>
+</html>

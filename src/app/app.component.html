@@ -1,59 +1,14 @@
+<div id="app">
+  
+  <qdn-sidebar></qdn-sidebar>
+  <div id="main">
+    <header class="mb-3">
+      <a href="#" class="burger-btn d-block d-xl-none">
+        <i class="bi bi-justify fs-3"></i>
+      </a>
+    </header>
+    <router-outlet></router-outlet>
+    <qdn-footer></qdn-footer>
 
-Abhay Velankar
-
-<h1>Data</h1>
-
-
-<input type="text"  #abc >
-
-<button type="button" (click)="show(abc.value)">
-
-
-  Show
-</button>
-
-
-<button type="button" (click)="showConsoleNormalFor()">
-
-
-  Show Console NormalFor
-</button>
-
-<button type="button" (click)="showConsoleForIn()">
-
-
-  Show Console ForIn
-</button>
-
-<button type="button" (click)="showConsoleForLetOf()">
-
-
-  Show Console For Let Of
-</button>
-
-<button type="button" (click)="showConsoleForEach()">
-
-
-  Show Console For Each
-</button>
-
-<button type="button" (click)="showConsoleForEach2()">
-
-
-  Show Console For Each 2
-</button>
-
-
-<h2>Hi {{abc.value}}</h2>
-
-<h2 [innerHTML]="'hi'+ name"></h2>
-
-
-<h2 [innerText]="'hi ' +name"></h2>
-
-
-<h2 [textContent]="'hi  ' + abc.value"></h2>
-
-
-
-
+  </div>
+</div>
