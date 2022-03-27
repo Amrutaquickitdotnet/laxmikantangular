@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+  <script>
+
+    function hashChange() {
+      var ele = document.querySelector("[qdn-view]");
+      if (window.location.hash == "#users") {
+        ele.innerHTML = "<b>I am in Users</b>"
+      } else if (window.location.hash == "#students") {
+        ele.innerHTML = "<b>I am in students</b>"
+      } else if (window.location.hash == "#Sujects") {
+        ele.innerHTML = "<b>I am in Sujects</b>"
+      } else {
+        ele.innerHTML = "<b>I am in Users</b>"
+      }
+    }
+
+    window.addEventListener('load', hashChange);
+    window.addEventListener('hashchange', hashChange);
+
+
+  </script>
+</head>
+<body>
+
+
+  <a href="#users">Users</a> | <a href="#students">Students</a> | <a href="#subjects">Sujects</a>
+
+
+  <div  qdn-view>
+
+  </div>
+</body>
+</html>

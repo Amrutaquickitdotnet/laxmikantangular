@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\node_modules\\@angular",
+    "\\node_modules\\@angular\\cli",
+    "\\node_modules\\@angular\\cli\\lib",
+    "\\node_modules\\@angular\\cli\\lib\\config",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\second",
+    "\\src\\documents",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\src\\app\\app.component.spec.ts",
   "PreviewInSolutionExplorer": false
 }
